@@ -1,6 +1,6 @@
 Области хранения данных:
 
--   база данных на json-server
+-   база данных на json-server (--port 3005)
 -   BFF
 -   Redux store
 
