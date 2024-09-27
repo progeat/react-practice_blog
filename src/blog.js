@@ -29,7 +29,7 @@ export const Blog = () => {
 				<H2>Контент страницы</H2>
 				<Routes>
 					<Route path="/" element={<div>Главная страница</div>} />
-					<Route path="/login" element={<div>=Авторизация</div>} />
+					<Route path="/login" element={<div>Авторизация</div>} />
 					<Route path="/register" element={<div>Регистрация</div>} />
 					<Route path="/users" element={<div>Пользователи</div>} />
 					<Route path="/post" element={<div>Новая статья</div>} />
