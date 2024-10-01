@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { server } from '../../bff';
+import { Button, Input } from '../../components';
 import styled from 'styled-components';
 
 const authFormSchema = yup.object().shape({
@@ -22,6 +24,13 @@ const authFormSchema = yup.object().shape({
 		.min(6, 'Неверно заполнен пароль. Минимум 6 символов')
 		.max(30, 'Неверно заполнен пароль. Максимум 30 символов'),
 });
+
+const StyledLink = styled(Link)`
+	text-align: center;
+	text-decoration: underline;
+	margin: 20px 0;
+	font-size: 18px;
+`;
 
 const AuthorizationContainer = ({ className }) => {
 	const {
@@ -53,15 +62,16 @@ const AuthorizationContainer = ({ className }) => {
 		<div className={className}>
 			<h2>Авторизация</h2>
 			<form onSubmit={handleSubmit(onSubmit)}>
-				<input type="text" placeholder="Логин..." {...register('login')} />
-				<input
+				<Input type="text" placeholder="Логин..." {...register('login')} />
+				<Input
 					type="password"
 					placeholder="Пароль..."
 					{...register('password')}
 				/>
-				<button type="submit" disabled={!!formError}>
-					Войти
-				</button>
+				<Button type="submit" disabled={!!formError}>
+					Авторизоваться
+				</Button>
+				<StyledLink to="/register">Регистрация</StyledLink>
 				{errorMessage && <div>{errorMessage}</div>}
 			</form>
 		</div>
@@ -76,5 +86,6 @@ export const Authorization = styled(AuthorizationContainer)`
 	& > form {
 		display: flex;
 		flex-direction: column;
+		width: 260px;
 	}
 `;
