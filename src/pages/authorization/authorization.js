@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { server } from '../../bff';
-import { Button, Input } from '../../components';
+import { Button, H2, Input } from '../../components';
+import { setUser } from '../../actions';
 import styled from 'styled-components';
 
 const authFormSchema = yup.object().shape({
@@ -32,6 +34,13 @@ const StyledLink = styled(Link)`
 	font-size: 18px;
 `;
 
+const ErrorMessage = styled.div`
+	margin: 10px 0 0;
+	padding: 10px;
+	font-size: 18px;
+	background-color: #fcadad;
+`;
+
 const AuthorizationContainer = ({ className }) => {
 	const {
 		register,
@@ -45,13 +54,18 @@ const AuthorizationContainer = ({ className }) => {
 		resolver: yupResolver(authFormSchema),
 	});
 
-	const [serverError, setServerError] = useState();
+	const [serverError, setServerError] = useState(null);
+
+	const dispatch = useDispatch();
 
 	const onSubmit = ({ login, password }) => {
 		server.authorize(login, password).then(({ error, res }) => {
 			if (error) {
 				setServerError(`Ошибка запроса: ${error}`);
+				return;
 			}
+
+			dispatch(setUser(res));
 		});
 	};
 
@@ -60,19 +74,27 @@ const AuthorizationContainer = ({ className }) => {
 
 	return (
 		<div className={className}>
-			<h2>Авторизация</h2>
+			<H2>Авторизация</H2>
 			<form onSubmit={handleSubmit(onSubmit)}>
-				<Input type="text" placeholder="Логин..." {...register('login')} />
+				<Input
+					type="text"
+					placeholder="Логин..."
+					{...register('login', {
+						onChange: () => setServerError(null),
+					})}
+				/>
 				<Input
 					type="password"
 					placeholder="Пароль..."
-					{...register('password')}
+					{...register('password', {
+						onChange: () => setServerError(null),
+					})}
 				/>
 				<Button type="submit" disabled={!!formError}>
 					Авторизоваться
 				</Button>
+				{errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
 				<StyledLink to="/register">Регистрация</StyledLink>
-				{errorMessage && <div>{errorMessage}</div>}
 			</form>
 		</div>
 	);
