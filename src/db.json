@@ -12,21 +12,7 @@
       "login": "user",
       "password": "qwerty123",
       "registed_at": "2053-03-14 23:01",
-      "role_id": 2
-    },
-    {
-      "id": "f634",
-      "login": "user",
-      "password": "qwerty123",
-      "registed_at": "2035-09-28 17:35",
-      "role_id": 2
-    },
-    {
-      "id": "1b63",
-      "login": "user",
-      "password": "qwerty123",
-      "registed_at": "2038-08-25 15:56",
-      "role_id": 2
+      "role_id": 1
     },
     {
       "id": "1581",
@@ -38,19 +24,19 @@
   ],
   "roles": [
     {
-      "id": "0",
+      "id": 0,
       "name": "Администратор"
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "Модератор"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Читатель"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Гость"
     }
   ],
