@@ -114,59 +114,18 @@
   ],
   "comments": [
     {
-      "id": "001",
+      "id": "7e27",
       "author_id": "001",
       "post_id": "001",
-      "content": "Хуйня"
+      "published_at": "2064-08-09 23:21",
+      "content": "Хуйня полная!!!"
     },
     {
-      "id": "1b47",
+      "id": "88bc",
       "author_id": "001",
       "post_id": "001",
-      "published_at": "2049-12-15 08:07",
-      "content": "Мой первый комментарий\n"
-    },
-    {
-      "id": "5b76",
-      "author_id": "001",
-      "post_id": "001",
-      "published_at": "2059-08-10 07:01",
-      "content": "Мой первый комментарий\n"
-    },
-    {
-      "id": "f311",
-      "author_id": "001",
-      "post_id": "001",
-      "published_at": "2042-12-12 02:31",
-      "content": "Мой первый комментарий"
-    },
-    {
-      "id": "58ac",
-      "author_id": "001",
-      "post_id": "001",
-      "published_at": "2058-09-05 16:40",
-      "content": "23r324\n"
-    },
-    {
-      "id": "7521",
-      "author_id": "001",
-      "post_id": "001",
-      "published_at": "2033-06-12 04:19",
-      "content": "432r324r"
-    },
-    {
-      "id": "4f33",
-      "author_id": "001",
-      "post_id": "001",
-      "published_at": "2050-08-24 14:40",
-      "content": "43r324"
-    },
-    {
-      "id": "92d0",
-      "author_id": "001",
-      "post_id": "001",
-      "published_at": "2050-11-03 21:05",
-      "content": "     4r432r324     \n"
+      "published_at": "2045-12-30 07:50",
+      "content": "Сам хуйня!!! Это только для теста!"
     }
   ],
   "sessions": [
