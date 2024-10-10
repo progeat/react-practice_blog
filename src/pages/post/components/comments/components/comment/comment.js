@@ -29,7 +29,7 @@ const CommentContainer = ({ className, postId, id, author, publishedAt, content 
 						<Icon
 							id="fa-user-circle-o"
 							size="18px"
-							margin="0 0 0 10px"
+							margin="0 10px 0 0"
 							onClick={() => {}}
 						/>
 						{author}
