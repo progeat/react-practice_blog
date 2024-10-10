@@ -8,6 +8,8 @@ const CommentContainer = ({ className, postId, id, author, publishedAt, content 
 	const dispatch = useDispatch();
 	const requestServer = useServerRequest();
 
+	console.log('comment author', author);
+
 	const onCommentRemove = (id) => {
 		dispatch(
 			openModal({
