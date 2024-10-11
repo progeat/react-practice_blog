@@ -18,8 +18,6 @@ const CommentsContainer = ({ className, comments, postId }) => {
 		setNewComment('');
 	};
 
-	console.log('comments author', comments);
-
 	return (
 		<div className={className}>
 			<div className="new-comment">

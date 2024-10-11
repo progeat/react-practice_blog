@@ -8,10 +8,8 @@ export const fetchPost = async (postId) => {
 	const users = await getUsers();
 
 	const commentsWithAuthor = comments.map((comment) => {
+		// TODO доработать работу вывода автора в комментариях (при добавлении и удалении)
 		const user = users.find(({ id }) => id === comment.authorId);
-
-		console.log('fetchPost user', user);
-		s;
 
 		return {
 			...comment,

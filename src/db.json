@@ -135,27 +135,6 @@
       "content": "Пушка!"
     },
     {
-      "id": "fdf3",
-      "author_id": "001",
-      "post_id": "002",
-      "published_at": "2040-08-18 13:50",
-      "content": "писюнававпвпвапвапвапвапвап"
-    },
-    {
-      "id": "797c",
-      "author_id": "001",
-      "post_id": "002",
-      "published_at": "2040-10-27 05:15",
-      "content": "huhiu"
-    },
-    {
-      "id": "f71b",
-      "author_id": "001",
-      "post_id": "002",
-      "published_at": "2034-03-02 17:55",
-      "content": "Куку"
-    },
-    {
       "id": "18a6",
       "author_id": "001",
       "post_id": "002",
@@ -168,6 +147,20 @@
       "post_id": "002",
       "published_at": "2044-12-22 17:32",
       "content": "Давай"
+    },
+    {
+      "id": "8780",
+      "author_id": "001",
+      "post_id": "002",
+      "published_at": "2048-09-24 21:18",
+      "content": "Привет"
+    },
+    {
+      "id": "1f99",
+      "author_id": "001",
+      "post_id": "002",
+      "published_at": "2034-05-18 20:34",
+      "content": "Как дела?\n"
     }
   ],
   "sessions": [
