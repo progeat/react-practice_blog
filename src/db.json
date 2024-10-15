@@ -177,17 +177,5 @@
       "content": "Как дела?\n"
     }
   ],
-  "sessions": [
-    {
-      "id": "2138",
-      "hash": "0.42044068639445053570113941532326862215995788574219",
-      "user": {
-        "id": "001",
-        "login": "admin",
-        "password": "qwerty123",
-        "registeredAt": "2024-05-25",
-        "roleId": 0
-      }
-    }
-  ]
+  "sessions": []
 }
