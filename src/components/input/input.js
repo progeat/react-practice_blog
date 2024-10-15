@@ -8,7 +8,7 @@ const InputContainer = forwardRef(({ className, width, ...props }, ref) => {
 export const Input = styled(InputContainer)`
 	height: 40px;
 	margin: 0 0 10px;
-	width: ${({ width = 'auto' }) => width};
+	width: ${({ width = '100%' }) => width};
 	padding: 10px;
 	font-size: 18px;
 	border: 1px solid #000;

@@ -7,11 +7,13 @@ import { setUser } from './actions';
 import styled from 'styled-components';
 
 const AppColumn = styled.div`
+	position: relative;
 	displey: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	margin: 0 auto;
 	width: 1000px;
+	min-height: 100%;
 	background-color: #fff;
 `;
 
