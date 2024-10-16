@@ -44,15 +44,18 @@ const PostCardContainer = ({
 };
 
 export const PostCard = styled(PostCardContainer)`
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	margin: 20px;
 	width: 280px;
 	border: 1px solid #000;
+	padding-bottom: 30px;
 
 	& img {
 		display: block;
-		width: 100%;
+		width: 278px;
+		height: 149px;
 	}
 
 	& .post-card-footer {
@@ -65,9 +68,11 @@ export const PostCard = styled(PostCardContainer)`
 	}
 
 	& .post-card-info {
+		position: absolute;
+		bottom: 3px;
 		display: flex;
-		jistify-content: space-between;
-		margin-top: 5px;
+		justify-content: space-between;
+		width: 268px;
 	}
 
 	& .published-at {
